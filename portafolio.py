@@ -104,13 +104,5 @@ with col1:
         link="https://proyecto-adicional.streamlit.app"
     )
 
-# Proyecto 4: Otro Proyecto
-with col2:
-    project_button(
-        image_path="images/otro_proyecto.png",  # Ruta local
-        caption="Otro Proyecto",
-        link="https://otro-proyecto.streamlit.app"
-    )
-
 # Mensaje adicional
 st.write("¡Gracias por visitar mi portafolio! Si quieres más información, no dudes en contactarme. 😊")
