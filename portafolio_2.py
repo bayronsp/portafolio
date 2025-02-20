@@ -76,7 +76,7 @@ def sobremi():
     st.markdown(
         """
         <div class="header">
-            <img src="images/profile.png" alt="Profile Image" class="profile-image">
+            <img src="https://raw.githubusercontent.com/bayronsp/portafolio/main/images/profile.png" alt="Profile Image" class="profile-image">
             <h1>Hola, soy <span>Bayron Salas Ponce</span></h1>
             <p>Ingeniero Civil Industrial especializado en Ciencia de Datos y Sistemas Inteligentes.</p>
             <p>Apasionado por la optimización de procesos y el análisis basado en datos.</p>
