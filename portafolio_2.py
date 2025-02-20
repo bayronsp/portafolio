@@ -16,8 +16,8 @@ st.markdown(
     """
     <style>
     /* Fondo general */
-    body {
-        background-color: #F9F9F9; /* Fondo gris súper claro */
+    [data-testid="stAppViewContainer"] {
+        background-color: #F9F9F9 !important; /* Usa !important para sobrescribir */
     }
 
     /* Sidebar */
@@ -73,7 +73,7 @@ st.markdown(
     /* Estilo de enlaces de proyectos */
     .project img {
         width: 300px;
-        border: 3px solid #F59E0B; /* Mostaza */
+        border: 3px solid #cbe9f7; /* celeste-gris */
         border-radius: 12px;
     }
     .project img:hover {
