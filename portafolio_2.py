@@ -60,7 +60,7 @@ st.markdown(
         color: #ffffff; /* Blanco */
     }
     .header h1 span {
-        color: #dddcf5; /* Gris azulado */
+        color: #cbe9f7; /* Gris azulado */
     }
     .header p {
         font-size: 20px;
@@ -68,7 +68,7 @@ st.markdown(
     }
     .profile-image {
         border-radius: 50%;
-        border: 4px solid #dddcf5; /* Gris azulado */
+        border: 4px solid #cbe9f7; /* Gris azulado */
         max-width: 160px;
         margin-top: 20px;
     }
