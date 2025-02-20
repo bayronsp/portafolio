@@ -78,6 +78,7 @@ st.markdown("---")
 
 # Estilo del enlace con HTML para hacer clic en la imagen
 peatones_url = "https://peatones.streamlit.app/#b4f9fe1a"
+st.header("Visualización de Peatones")
 st.markdown(
     f"""
     <a href="{peatones_url}" target="_blank">
@@ -86,10 +87,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# Subtítulo y descripción opcional
-st.subheader("Visualización de Peatones")
-st.write(f"[Ir al proyecto de Visualización de Peatones]({peatones_url})")
 
 # Pie de página
 st.markdown("---")
