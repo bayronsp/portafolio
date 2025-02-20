@@ -17,12 +17,12 @@ st.markdown(
     <style>
     /* Fondo general */
     [data-testid="stAppViewContainer"] {
-        background-color: #0f0f2b !important; /* Usa !important para sobrescribir */
+        background-color: #0f091f !important; /* Usa !important para sobrescribir */
     }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background-color: #0f091f; /* Fondo gris más oscuro */
+        background-color: #0f0f2b; /* Fondo gris más oscuro */
     }
 
     [data-testid="stSidebar"] h1 {
