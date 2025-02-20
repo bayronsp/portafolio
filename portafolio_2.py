@@ -66,48 +66,6 @@ def sobremi():
                 max-width: 160px;
                 margin-top: 20px;
             }
-            .timeline {
-                margin: 50px auto;
-                max-width: 900px;
-            }
-            .timeline-item {
-                display: flex;
-                align-items: center;
-                margin-bottom: 40px;
-                padding: 20px;
-                background: #FFFFFF;
-                border-radius: 12px;
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease;
-            }
-            .timeline-item:hover {
-                transform: translateY(-10px);
-            }
-            .timeline-item-icon {
-                width: 30px;
-                height: 30px;
-                background-color: #F59E0B;
-                border-radius: 50%;
-                flex-shrink: 0;
-                margin-right: 20px;
-            }
-            .timeline-item-content {
-                flex-grow: 1;
-            }
-            .timeline-item-title {
-                font-size: 22px;
-                font-weight: bold;
-                color: #1E3A8A;
-            }
-            .timeline-item-company {
-                font-size: 16px;
-                color: #6B7280;
-            }
-            .timeline-item-description {
-                font-size: 14px;
-                color: #374151;
-                margin-top: 10px;
-            }
         </style>
         """,
         unsafe_allow_html=True,
@@ -125,8 +83,7 @@ def sobremi():
         """,
         unsafe_allow_html=True,
     )
-
-    # Línea de tiempo de experiencia laboral
+        # Línea de tiempo de experiencia laboral
     st.markdown(
         """
         <div class="timeline">
@@ -165,45 +122,33 @@ def sobremi():
         unsafe_allow_html=True,
     )
 
-st.sidebar.title("Proyectos")
+st.sidebar.title("Navegación")
 
 # Contenedor principal para organizar botones
 with st.sidebar.container():
     # Botones principales en la parte superior
-    if st.button("Modelos para la toma de decisiones multicriterio"):
-        st.session_state.pagina_actual = "mcm"
-    if st.button("Administración y planificación de la producción"):
-        st.session_state.pagina_actual = "plani"
-    if st.button("Proyectos de simulación y optimización del sistema de la producción"):
-        st.session_state.pagina_actual = "simuio"
-    if st.button("Modelo de visión por computadora para la detección y contabilización de objetos"):
-        st.session_state.pagina_actual = "capstone"
-
-# Contenedor adicional para colocar el botón "Sobre mí" al fondo
-with st.sidebar.container():
-    st.write("\n" * 100)  # Añadir un espacio vertical controlado
     if st.button("Sobre mí"):
         st.session_state.pagina_actual = "Sobre mí"
+    if st.button("Procesamiento de Imágenes"):
+        st.session_state.pagina_actual = "procesamiento_imagenes"
 
 # Control de navegación entre páginas
-pagina = st.session_state.get("pagina_actual", "mcm")  # Página predeterminada: "mcm"
+pagina = st.session_state.get("pagina_actual", "Sobre mí")  # Página predeterminada: "Sobre mí"
 
 # Mostrar contenido basado en la página seleccionada
-if pagina == "mcm":
-    st.title("Inicio")
-    st.write("¡Bienvenido a la página principal!")
-elif pagina == "plani":
-    st.title("Hoja 1")
-    st.write("Esta es la primera hoja.")
-    numero = st.number_input("Ingresa un número:")
-    st.write(f"El cuadrado del número es: {numero ** 2}")
-elif pagina == "simuio":
-    st.title("Hoja 2")
-    st.write("Esta es la segunda hoja.")
-    texto = st.text_input("Escribe algo aquí:")
-    st.write(f"Escribiste: {texto}")
-elif pagina == "capstone":
-    st.title("Acerca de")
-    st.write("Esta es una aplicación de ejemplo creada con Streamlit.")
-elif pagina == "Sobre mí":
+if pagina == "Sobre mí":
     sobremi()
+elif pagina == "procesamiento_imagenes":
+    st.title("Proyectos de Procesamiento de Imágenes")
+
+    # Estilo del enlace con HTML para hacer clic en la imagen
+    peatones_url = "https://peatones.streamlit.app/#b4f9fe1a"
+    st.header("Visualización de Peatones")
+    st.markdown(
+        f"""
+        <a href="{peatones_url}" target="_blank">
+            <img src="https://raw.githubusercontent.com/bayronsp/portafolio/main/images/peatones.png" style="width:300px; border:none;"/>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
