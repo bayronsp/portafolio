@@ -22,7 +22,7 @@ st.markdown(
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background-color: ##0f091f; /* Fondo gris más oscuro */
+        background-color: #0f091f; /* Fondo gris más oscuro */
     }
 
     [data-testid="stSidebar"] h1 {
