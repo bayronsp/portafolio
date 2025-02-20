@@ -2,14 +2,15 @@ import streamlit as st
 
 # Configuración de la página
 st.set_page_config(
-        page_title="Portafolio Bayron Salas",
-        page_icon=":briefcase:",
-        layout="wide",
-    )
+    page_title="Portafolio Bayron Salas",
+    page_icon=":briefcase:",
+    layout="wide",
+)
 
 # Variable para controlar la navegación entre hojas
 if "pagina_actual" not in st.session_state:
     st.session_state.pagina_actual = "Sobre mí"
+
 st.markdown(
     """
     <style>
@@ -75,7 +76,7 @@ def sobremi():
     st.markdown(
         """
         <div class="header">
-            <img src="https://via.placeholder.com/160" alt="Profile Image" class="profile-image">
+            <img src="https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png" alt="Profile Image" class="profile-image">
             <h1>Hola, soy <span>Bayron Salas Ponce</span></h1>
             <p>Ingeniero Civil Industrial especializado en Ciencia de Datos y Sistemas Inteligentes.</p>
             <p>Apasionado por la optimización de procesos y el análisis basado en datos.</p>
@@ -83,63 +84,10 @@ def sobremi():
         """,
         unsafe_allow_html=True,
     )
-        # Línea de tiempo de experiencia laboral
-    st.markdown(
-        """
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-item-icon"></div>
-                <div class="timeline-item-content">
-                    <div class="timeline-item-title">Capstone Project - Proyecto de Titulación</div>
-                    <div class="timeline-item-company">BRANDA SERVICIOS SPA - Ago 2024 – Ene 2025</div>
-                    <div class="timeline-item-description">
-                        Automatización de procesos y centralización de datos críticos en Power BI, logrando ahorros de más de $51 millones de pesos en el primer año.
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-item-icon"></div>
-                <div class="timeline-item-content">
-                    <div class="timeline-item-title">Ayudante de Ciencia de Datos</div>
-                    <div class="timeline-item-company">Universidad Católica del Norte - Ago 2023 – Ago 2024</div>
-                    <div class="timeline-item-description">
-                        Lideré la ejecución de laboratorios prácticos, desde regresión lineal hasta redes neuronales, apoyando a estudiantes en técnicas avanzadas.
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-item-icon"></div>
-                <div class="timeline-item-content">
-                    <div class="timeline-item-title">Práctica Preprofesional</div>
-                    <div class="timeline-item-company">BST - Ene 2024 – Feb 2024</div>
-                    <div class="timeline-item-description">
-                        Desarrollo de un flujo ETL en Python para automatizar cargas a SQL Server, mejorando la eficiencia del procesamiento de datos.
-                    </div>
-                </div>
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
 
-st.sidebar.title("Navegación")
-
-# Contenedor principal para organizar botones
-with st.sidebar.container():
-    # Botones principales en la parte superior
-    if st.button("Sobre mí"):
-        st.session_state.pagina_actual = "Sobre mí"
-    if st.button("Procesamiento de Imágenes"):
-        st.session_state.pagina_actual = "procesamiento_imagenes"
-
-# Control de navegación entre páginas
-pagina = st.session_state.get("pagina_actual", "Sobre mí")  # Página predeterminada: "Sobre mí"
-
-# Mostrar contenido basado en la página seleccionada
-if pagina == "Sobre mí":
-    sobremi()
-elif pagina == "procesamiento_imagenes":
-    st.title("Proyectos de Procesamiento de Imágenes")
+# Función "Análisis de Datos"
+def analisis_datos():
+    st.title("Proyectos de Análisis de Datos")
 
     # Estilo del enlace con HTML para hacer clic en la imagen
     peatones_url = "https://peatones.streamlit.app/#b4f9fe1a"
@@ -152,3 +100,22 @@ elif pagina == "procesamiento_imagenes":
         """,
         unsafe_allow_html=True
     )
+
+st.sidebar.title("Navegación")
+
+# Contenedor principal para organizar botones
+with st.sidebar.container():
+    # Botones principales en la parte superior
+    if st.button("Sobre mí"):
+        st.session_state.pagina_actual = "Sobre mí"
+    if st.button("Análisis de Datos"):
+        st.session_state.pagina_actual = "analisis_datos"
+
+# Control de navegación entre páginas
+pagina = st.session_state.get("pagina_actual", "Sobre mí")  # Página predeterminada: "Sobre mí"
+
+# Mostrar contenido basado en la página seleccionada
+if pagina == "Sobre mí":
+    sobremi()
+elif pagina == "analisis_datos":
+    analisis_datos()
