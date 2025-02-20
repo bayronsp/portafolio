@@ -82,7 +82,7 @@ st.header("Visualización de Peatones")
 st.markdown(
     f"""
     <a href="{peatones_url}" target="_blank">
-        <img src="images/peatones.png" alt="Visualización de Peatones" style="width:300px; border:none;"/>
+        <img src="images/peatones.png" style="width:300px; border:none;"/>
     </a>
     """,
     unsafe_allow_html=True
