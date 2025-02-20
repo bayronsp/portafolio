@@ -70,7 +70,7 @@ def project_button(image_path, caption, link):
     html_button = f"""
     <div class="project-container">
         <a href="{link}" target="_blank">
-            <img src="{image_path}" alt="{caption}">
+            <img src="{image_path}" alt="{caption}" width="100" height="100">
             <button>{caption}</button>
         </a>
     </div>
