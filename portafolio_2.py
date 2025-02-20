@@ -45,8 +45,8 @@ st.markdown(
         margin-bottom: 10px;
     }
     .stButton button:hover {
-        background-color: #1E3A8A; /* Fondo azul al pasar el ratón */
-        color: white; /* Texto blanco al pasar el ratón */
+        background-color: #F9BF3B !important; /* Fondo amarillo en hover */
+        color: #272640 !important; /* Texto azul oscuro */
     }
 
     /* Header principal */
