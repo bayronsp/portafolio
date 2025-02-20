@@ -18,28 +18,31 @@ st.markdown(
     /* Fondo general */
     [data-testid="stAppViewContainer"] {
         background-color: #0f091f !important; /* Usa !important para sobrescribir */
+        color: #e0e0e0;
     }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
         background-color: #0f0f2b; /* Fondo gris más oscuro */
+        color: #ffffff;
     }
 
     [data-testid="stSidebar"] h1 {
         text-align: center; /* Centrar el texto */
-        color: #1E3A8A; /* Azul profesional */
+        color: #ffffff; /* blanco */
         font-weight: bold; /* Negrita */
     }
 
     /* Botones en sidebar */
     .stButton button {
-        color: #1E3A8A; /* Azul profesional */
-        background-color: white; /* Fondo blanco */
-        border: 2px solid #1E3A8A; /* Borde azul */
+        background-color: #272640 !important; /* Fondo azul oscuro */
+        color: #F9BF3B !important; /* Texto amarillo */
+        border: 2px solid #F9BF3B !important; /* Borde amarillo */
         border-radius: 8px; /* Bordes redondeados */
-        font-size: 16px; /* Tamaño de texto */
-        font-weight: bold; /* Negrita */
-        margin-bottom: 10px; /* Espaciado */
+        font-size: 16px; /* Tamaño del texto */
+        font-weight: bold; /* Texto en negrita */
+        padding: 10px;
+        margin-bottom: 10px;
     }
     .stButton button:hover {
         background-color: #1E3A8A; /* Fondo azul al pasar el ratón */
