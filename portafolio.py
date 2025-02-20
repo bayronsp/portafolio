@@ -74,7 +74,7 @@ st.subheader("Chatbot ALOHA VIRTUAL")
 st.write("[Ir al proyecto del Chatbot ALOHA VIRTUAL](https://example.com/chatbot)")
 
 # Proyecto 2
-st.image("images/visualizacion.png", width=100)
+st.image("images/peatones.png", width=100)
 st.subheader("Visualización de Peatones")
 st.write("[Ir al proyecto de Visualización de Peatones](https://peatones.streamlit.app/#b4f9fe1a)")
 
