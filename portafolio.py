@@ -76,20 +76,20 @@ st.write("Bienvenido a mi portafolio. Aquí puedes explorar algunos de mis proye
 # Espaciado
 st.markdown("---")
 
-# Proyecto 1
-st.image("images/chatbot.png", width=300)
-st.subheader("Chatbot ALOHA VIRTUAL")
-st.write("[Ir al proyecto del Chatbot ALOHA VIRTUAL](https://example.com/chatbot)")
+# Estilo del enlace con HTML para hacer clic en la imagen
+peatones_url = "https://peatones.streamlit.app/#b4f9fe1a"
+st.markdown(
+    f"""
+    <a href="{peatones_url}" target="_blank">
+        <img src="images/peatones.png" alt="Visualización de Peatones" style="width:300px; border:none;"/>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
 
-# Proyecto 2
-st.image("images/peatones.png", width=300)
+# Subtítulo y descripción opcional
 st.subheader("Visualización de Peatones")
-st.write("[Ir al proyecto de Visualización de Peatones](https://peatones.streamlit.app/#b4f9fe1a)")
-
-# Proyecto 3
-st.image("images/proyecto_adicional.png", width=300)
-st.subheader("Proyecto Adicional")
-st.write("[Ir al proyecto adicional](https://example.com/adicional)")
+st.write(f"[Ir al proyecto de Visualización de Peatones]({peatones_url})")
 
 # Pie de página
 st.markdown("---")
