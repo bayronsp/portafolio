@@ -57,18 +57,18 @@ st.markdown(
     .header h1 {
         font-size: 48px;
         font-weight: bold;
-        color: #1E3A8A; /* Azul profesional */
+        color: #ffffff; /* Blanco */
     }
     .header h1 span {
-        color: #F59E0B; /* Mostaza */
+        color: #dddcf5; /* Gris azulado */
     }
     .header p {
         font-size: 20px;
-        color: #4B5563; /* Gris oscuro */
+        color: #ffffff; /* Blanco */
     }
     .profile-image {
         border-radius: 50%;
-        border: 4px solid #F59E0B; /* Mostaza */
+        border: 4px solid #dddcf5; /* Gris azulado */
         max-width: 160px;
         margin-top: 20px;
     }
