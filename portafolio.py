@@ -61,48 +61,29 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Título del portafolio
+# Título principal
 st.title("🌟 Mi Portafolio de Proyectos")
 st.write("Bienvenido a mi portafolio. Aquí puedes explorar algunos de mis proyectos más destacados. ¡Haz clic en los botones para probarlos!")
 
-# Función para crear un botón con imagen y texto
-def project_button(image_path, caption, link):
-    html_button = f"""
-    <div class="project-container">
-        <a href="{link}" target="_blank">
-            <img src="{image_path}" alt="{caption}" width="100" height="100">
-            <button>{caption}</button>
-        </a>
-    </div>
-    """
-    st.markdown(html_button, unsafe_allow_html=True)
+# Espaciado
+st.markdown("---")
 
-# Proyectos en dos columnas
-col1, col2 = st.columns(2)
+# Proyecto 1
+st.image("images/chatbot.png", width=100)
+st.subheader("Chatbot ALOHA VIRTUAL")
+st.write("[Ir al proyecto del Chatbot ALOHA VIRTUAL](https://example.com/chatbot)")
 
-# Proyecto 1: Chatbot
-with col1:
-    project_button(
-        image_path="images/chatbot.png",  # Ruta local
-        caption="Chatbot ALOHA VIRTUAL",
-        link="https://aloha-virtual.streamlit.app"
-    )
+# Proyecto 2
+st.image("images/visualizacion.png", width=100)
+st.subheader("Visualización de Peatones")
+st.write("[Ir al proyecto de Visualización de Peatones](https://peatones.streamlit.app/#b4f9fe1a)")
 
-# Proyecto 2: Visualización de Peatones
-with col2:
-    project_button(
-        image_path="images/peatones.png",  # Ruta local
-        caption="Visualización de Peatones",
-        link="https://peatones.streamlit.app"
-    )
+# Proyecto 3
+st.image("images/proyecto_adicional.png", width=100)
+st.subheader("Proyecto Adicional")
+st.write("[Ir al proyecto adicional](https://example.com/adicional)")
 
-# Proyecto 3: Proyecto Adicional
-with col1:
-    project_button(
-        image_path="images/proyecto_adicional.png",  # Ruta local
-        caption="Proyecto Adicional",
-        link="https://proyecto-adicional.streamlit.app"
-    )
-
+# Pie de página
+st.markdown("---")
 # Mensaje adicional
 st.write("¡Gracias por visitar mi portafolio! Si quieres más información, no dudes en contactarme. 😊")
