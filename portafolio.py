@@ -44,6 +44,14 @@ custom_style = """
         .project-container a {
             text-decoration: none;
         }
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+        }
     </style>
 """
 
@@ -69,17 +77,17 @@ st.write("Bienvenido a mi portafolio. Aquí puedes explorar algunos de mis proye
 st.markdown("---")
 
 # Proyecto 1
-st.image("images/chatbot.png", width=100)
+st.image("images/chatbot.png", width=300)
 st.subheader("Chatbot ALOHA VIRTUAL")
 st.write("[Ir al proyecto del Chatbot ALOHA VIRTUAL](https://example.com/chatbot)")
 
 # Proyecto 2
-st.image("images/peatones.png", width=100)
+st.image("images/peatones.png", width=300)
 st.subheader("Visualización de Peatones")
 st.write("[Ir al proyecto de Visualización de Peatones](https://peatones.streamlit.app/#b4f9fe1a)")
 
 # Proyecto 3
-st.image("images/proyecto_adicional.png", width=100)
+st.image("images/proyecto_adicional.png", width=300)
 st.subheader("Proyecto Adicional")
 st.write("[Ir al proyecto adicional](https://example.com/adicional)")
 
