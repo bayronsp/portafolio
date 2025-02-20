@@ -60,7 +60,7 @@ st.markdown(
         color: #ffffff; /* Blanco */
     }
     .header h1 span {
-        color: #a4e0fc; /* Gris azulado */
+        color: #47c3fc; /* celeste */
     }
     .header p {
         font-size: 20px;
@@ -68,7 +68,7 @@ st.markdown(
     }
     .profile-image {
         border-radius: 50%;
-        border: 4px solid #a4e0fc; /* Gris azulado */
+        border: 4px solid #47c3fc; /* celeste */
         max-width: 160px;
         margin-top: 20px;
     }
@@ -76,11 +76,11 @@ st.markdown(
     /* Estilo de enlaces de proyectos */
     .project img {
         width: 300px;
-        border: 3px solid #a4e0fc; /* celeste-gris */
+        border: 3px solid #47c3fc; /* celeste*/
         border-radius: 12px;
     }
     .project img:hover {
-        border-color: #1E3A8A; /* Azul profesional al pasar el ratón */
+        border-color: #47c3fc; /* Azul profesional al pasar el ratón */
     }
     </style>
     """,
