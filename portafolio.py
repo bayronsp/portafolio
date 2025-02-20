@@ -3,7 +3,7 @@ import streamlit as st
 # Configuración de la página
 st.set_page_config(page_title="Mi Portafolio", page_icon="🎯", layout="centered")
 
-# Estilo CSS para personalizar el fondo y el footer
+# Estilo CSS para personalizar fondo, botones e imagen
 custom_style = """
     <style>
         body {
@@ -33,6 +33,17 @@ custom_style = """
             background-color: #AE431C;  /* Hover en rojo oscuro */
             color: #FFFFFF;
         }
+        .project-container {
+            text-align: center;
+            padding: 20px;
+        }
+        .project-container img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+        .project-container a {
+            text-decoration: none;
+        }
     </style>
 """
 
@@ -54,29 +65,52 @@ st.markdown(
 st.title("🌟 Mi Portafolio de Proyectos")
 st.write("Bienvenido a mi portafolio. Aquí puedes explorar algunos de mis proyectos más destacados. ¡Haz clic en los botones para probarlos!")
 
+# Función para crear un botón con imagen y texto
+def project_button(image_path, caption, link):
+    html_button = f"""
+    <div class="project-container">
+        <a href="{link}" target="_blank">
+            <img src="{image_path}" alt="{caption}">
+            <button>{caption}</button>
+        </a>
+    </div>
+    """
+    st.markdown(html_button, unsafe_allow_html=True)
+
+# Proyectos en dos columnas
+col1, col2 = st.columns(2)
+
 # Proyecto 1: Chatbot
-col1, col2 = st.columns([1, 2])
 with col1:
-    st.image("./images/chatbot.png", caption="Chatbot ALOHA VIRTUAL", use_column_width=True)  # Reemplaza con la ruta de tu imagen
+    project_button(
+        image_path="images/chatbot.png",  # Ruta local
+        caption="Chatbot ALOHA VIRTUAL",
+        link="https://aloha-virtual.streamlit.app"
+    )
+
+# Proyecto 2: Visualización de Peatones
 with col2:
-    if st.button("Explorar Chatbot ALOHA VIRTUAL"):
-        st.markdown("[Ir al proyecto](https://aloha-virtual.streamlit.app)", unsafe_allow_html=True)
+    project_button(
+        image_path="images/peatones.png",  # Ruta local
+        caption="Visualización de Peatones",
+        link="https://peatones.streamlit.app"
+    )
 
-# Proyecto 2: Visualización de datos de peatones
-col3, col4 = st.columns([1, 2])
-with col3:
-    st.image("./images/peatones.png", caption="Visualización de Peatones", use_column_width=True)  # Reemplaza con la ruta de tu imagen
-with col4:
-    if st.button("Explorar Visualización de Peatones"):
-        st.markdown("[Ir al proyecto](https://peatones.streamlit.app)", unsafe_allow_html=True)
+# Proyecto 3: Proyecto Adicional
+with col1:
+    project_button(
+        image_path="images/proyecto_adicional.png",  # Ruta local
+        caption="Proyecto Adicional",
+        link="https://proyecto-adicional.streamlit.app"
+    )
 
-# Proyecto 3: Proyecto adicional
-col5, col6 = st.columns([1, 2])
-with col5:
-    st.image("./images/proyecto_adicional.png", caption="Proyecto Adicional", use_column_width=True)  # Reemplaza con la ruta de tu imagen
-with col6:
-    if st.button("Explorar Proyecto Adicional"):
-        st.markdown("[Ir al proyecto](https://proyecto-adicional.streamlit.app)", unsafe_allow_html=True)
+# Proyecto 4: Otro Proyecto
+with col2:
+    project_button(
+        image_path="images/otro_proyecto.png",  # Ruta local
+        caption="Otro Proyecto",
+        link="https://otro-proyecto.streamlit.app"
+    )
 
 # Mensaje adicional
 st.write("¡Gracias por visitar mi portafolio! Si quieres más información, no dudes en contactarme. 😊")
